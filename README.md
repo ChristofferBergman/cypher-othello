@@ -28,16 +28,16 @@ Every cell in the matrix is represented by a node with the label **Cell** and th
 (:Cell)-[:NEIGHBOR_OF]->(:Cell)
 ```
 
-The NEIGHBOR_OF relationships has one property called direction which can have four values:\
-1: Downward to the right\
-2: Vertical\
-3: Downward to the left\
-4: Horisontal
+The **NEIGHBOR_OF** relationships has one property called direction which can have four values:\
+**1**: Downward to the right\
+**2**: Vertical\
+**3**: Downward to the left\
+**4**: Horisontal
 
-The Cell nodes has four properties:\
-row: The row (y-coordinate) of the cell (0-7)\
-column: The column (x-coordinate) of the cell (0-7)\
-state: null if the cell is available, "X" if it is taken by Black or "O" if it is taken by white
+The **Cell** nodes has four properties:\
+**row**: The row (y-coordinate) of the cell (0-7)\
+**column**: The column (x-coordinate) of the cell (0-7)\
+**state**: null if the cell is available, "X" if it is taken by Black or "O" if it is taken by white
 
 **Note!!** that when the game is started it will clear everything from the instance it is connected against, so don't connect it to an instance where there is data you want to keep.
 

@@ -16,7 +16,7 @@ public class Game {
 		
 		if (args.length < 7) {
 			System.err.println("Incorrect number of arguments");
-			System.err.println("Usage: mvn exec:java -Dexec.args=\"Player_Black_ClassName Player_White_ClassName  DB_URI DB_USER DB_PWD DB_NAME API_KEY [TIME_LIMIT_S] [BENCHMARK] [FRAME_X] [FRAME_Y]\"");
+			System.err.println("Usage: mvn exec:java -Dexec.args=\"Player_Black_ClassName Player_White_ClassName  DB_URI DB_USER DB_PWD DB_NAME API_KEY [TIME_LIMIT_S [BENCHMARK [FRAME_X FRAME_Y]]]\"");
 			System.err.println("");
 			return;
 		}

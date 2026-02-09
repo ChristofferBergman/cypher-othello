@@ -78,15 +78,15 @@ And run it like this:
 ```
 mvn exec:java -Dexec.args="Player_Black_ClassName Player_White_ClassName  DB_URI DB_USER DB_PWD DB_NAME API_KEY [TIME_LIMIT_S [BENCHMARK [FRAME_X FRAME_Y]]]"
 ```
-**Player_Black_ClassName**: The class name (without package name) of the player implementation to play Black
-**Player_White_ClassName**: The class name (without package name) of the player implementation to play White
-**DB_URI**: The URI to the Neo4j instance to use, e.g. neo4j://localhost:7687 for a local instance or neo4j+s://xxxxxxxx.databases.neo4j.io for an Aura instance
-**DB_USER**: The Neo4j user (usually neo4j)
-**DB_PWD**: The password of that user
-**DB_NAME**: The name of the database to use (usually neo4j)
-**API_KEY**: An API key that one can be used to, for example, call AI procedures (will be passed to the queries, see above)
-**TIME_LIMIT_S**: A time limit, in seconds. If the query time exceeds this the player loses. However, the first move is never times as some warmup time might be needed. 0 or less to disable. Default -1.
-**BENCHMARK**: true to get a printout of all times taken for each move of each player after the game is over. Default false
+**Player_Black_ClassName**: The class name (without package name) of the player implementation to play Black\
+**Player_White_ClassName**: The class name (without package name) of the player implementation to play White\
+**DB_URI**: The URI to the Neo4j instance to use, e.g. neo4j://localhost:7687 for a local instance or neo4j+s://xxxxxxxx.databases.neo4j.io for an Aura instance\
+**DB_USER**: The Neo4j user (usually neo4j)\
+**DB_PWD**: The password of that user\
+**DB_NAME**: The name of the database to use (usually neo4j)\
+**API_KEY**: An API key that one can be used to, for example, call AI procedures (will be passed to the queries, see above)\
+**TIME_LIMIT_S**: A time limit, in seconds. If the query time exceeds this the player loses. However, the first move is never times as some warmup time might be needed. 0 or less to disable. Default -1.\
+**BENCHMARK**: true to get a printout of all times taken for each move of each player after the game is over. Default false\
 **FRAME_X/FRAME_Y**: Set to screen coordinates to force the frame to that position on the screen. Default center of screen.
 
 For example:

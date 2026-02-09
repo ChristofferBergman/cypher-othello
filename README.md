@@ -28,7 +28,7 @@ Every cell in the matrix is represented by a node with the label **Cell** and th
 (:Cell)-[:NEIGHBOR_OF]->(:Cell)
 ```
 
-The **NEIGHBOR_OF** relationships has one property called direction which can have four values:\
+The **NEIGHBOR_OF** relationships has one property called **direction** which can have four values:\
 **1**: Downward to the right\
 **2**: Vertical\
 **3**: Downward to the left\

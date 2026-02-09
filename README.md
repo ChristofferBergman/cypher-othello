@@ -64,8 +64,8 @@ END AS valid
 There is an interface called Player with one method called getCypherForRound(). To implement a new player you create a class that implements this interface and you implement this method. The method should return the Cypher query as a string. This query must return one record with one entry called "cell", and this should point at the Cell node where you want to put your piece. In the Cypher query, black bricks are represted as "X" and white bricks as "O". Note that these queries will be run in read-only mode. If the player performs an invalid move (i.e. one that doesn't fullfil the query above) it will be disqualified and the game is over with the other player as the winner. Player class implementations must reside in the same package as the other classes (org.neo4j.othello).
 
 The following parameters will be provided to the query:\
-$symbol: The symbol used by this player (either "X" for Black or "O" for White) [String]\
-$apiKey: An API key that one can be used to, for example, call AI procedures (supplied on the command line) [String]
+**$symbol**: The symbol used by this player (either "X" for Black or "O" for White) [String]\
+**$apiKey**: An API key that one can be used to, for example, call AI procedures (supplied on the command line) [String]
 
 There is an example Player included called Simple. This one looks for valid moves and randomly picks one of them. There is also a Player implementation that is handled a bit differently. It is called Human and allows you to click on the playing field to decide where to put your brick.
 

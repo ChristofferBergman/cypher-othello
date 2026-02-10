@@ -187,7 +187,6 @@ public class GameFrame extends JFrame {
 			setVerticalAlignment(CENTER);
 			setPreferredSize(new Dimension(30, 30));
 			setFont(getFont().deriveFont(getFont().getSize2D()*2f));
-			//setBorder(BorderFactory.createLineBorder(Color.black, 1));
 		}
 
 		public void update(Cell cell) {
@@ -199,7 +198,7 @@ public class GameFrame extends JFrame {
 
 		@Override
 		protected void paintComponent(Graphics g) {
-			g.setColor(Color.green);
+			g.setColor(new Color(0,144,103));
 			g.fillRect(0, 0, getWidth(), getHeight());
 			g.setColor(Color.black);
 			g.drawRect(0, 0, getWidth(), getHeight());

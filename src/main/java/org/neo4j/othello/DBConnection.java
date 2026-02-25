@@ -49,9 +49,9 @@ public class DBConnection implements AutoCloseable {
 
 		var query = new Query(
 				"""
-				UNWIND range(0,8-1) AS row
+				UNWIND range(0,7) AS row
 				WITH row
-				UNWIND range(0,8-1) AS column
+				UNWIND range(0,7) AS column
 				WITH row, column
 				CREATE (cell:Cell {row:row, column:column})
 				CALL(cell, row, column) {
@@ -64,8 +64,7 @@ public class DBConnection implements AutoCloseable {
 				UNWIND [[row-1, column-1, 1],[row-1, column, 2],[row-1, column+1, 3],[row, column-1, 4]] AS neighbor
 				MATCH (other:Cell {row:neighbor[0], column:neighbor[1]})
 				MERGE (other)-[:NEIGHBOR_OF {direction: neighbor[2]}]->(cell)
-				""",
-				Map.of("width", width, "height", height));
+				""");
 
 		try (var session = driver.session(SessionConfig.forDatabase(db))) {
 			session.executeWriteWithoutResult(tx -> tx.run(query).consume());

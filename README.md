@@ -22,7 +22,7 @@ O-O-O-O-O-O-O-O
 |X|X|X|X|X|X|X|
 O-O-O-O-O-O-O-O
 ```
-The O's above reprenet nodes and the dashes, pipes and X's shows the relationships.\
+The O's above represent nodes and the dashes, pipes and X's shows the relationships.\
 Every cell in the matrix is represented by a node with the label **Cell** and the cells are connected horisontally, vertically and diagonally with relationships called **NEIGHBOR_OF**.
 ```
 (:Cell)-[:NEIGHBOR_OF]->(:Cell)
@@ -32,9 +32,9 @@ The **NEIGHBOR_OF** relationships has one property called **direction** which ca
 **1**: Downward to the right\
 **2**: Vertical\
 **3**: Downward to the left\
-**4**: Horisontal
+**4**: Horizontal
 
-The **Cell** nodes has four properties:\
+The **Cell** nodes has three properties:\
 **row**: The row (y-coordinate) of the cell (0-7)\
 **column**: The column (x-coordinate) of the cell (0-7)\
 **state**: null if the cell is available, "X" if it is taken by Black or "O" if it is taken by white

@@ -102,7 +102,7 @@ public class Game {
 		////////////////////////////////////////////////////////
 		// Main game loop
 
-		try (DBConnection db = new DBConnection(args[2], args[3], args[4], args[5], args[6], WIDTH, HEIGHT)) {
+		try (DBConnection db = new DBConnection(args[2], args[3], args[4], args[5], args[6])) {
 			db.setupGrid();
 			frame.update(db.getState());
 

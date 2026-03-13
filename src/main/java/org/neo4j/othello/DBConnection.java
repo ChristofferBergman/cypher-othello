@@ -15,16 +15,12 @@ public class DBConnection implements AutoCloseable {
 	private final Driver driver;
 	private final String db;
 	private final String apiKey;
-	private final int width;
-	private final int height;
 
-	public DBConnection(String uri, String user, String pwd, String db, String apiKey, int width, int height) {
+	public DBConnection(String uri, String user, String pwd, String db, String apiKey) {
 		driver = GraphDatabase.driver(uri, AuthTokens.basic(user, pwd), Config.defaultConfig());
 		
 		this.db = db;
 		this.apiKey = apiKey;
-		this.width = width;
-		this.height = height;
 	}
 
 	@Override
